@@ -6,11 +6,21 @@ namespace :deploy do
     end
   end
 
-  desc "clear cache"
-  after :published, :clear_cache do
+  desc "decko updates"
+  after :deploy_chown, :decko_updates do
     on roles(:app) do
       within release_path do
-        execute :rake, "decko:reset_cache"
+        execute :bundle, :exec, :decko, :update
+      end
+    end
+  end
+
+  desc "cache_and_machines"
+  after :published, :clear_caches do
+    on roles(:app) do
+      within release_path do
+        execute :bundle, :exec, :rake, "decko:reset_cache"
+        execute :bundle, :exec, :rake, "card:refresh_machine_output"
       end
     end
   end
