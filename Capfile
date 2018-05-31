@@ -39,7 +39,7 @@ install_plugin Capistrano::SCM::Git::WithSubmodules
 
 require "capistrano/rvm"
 require "capistrano/bundler"
-require "capistrano/maintenance"
+# require "capistrano/maintenance"
 require "airbrussh/capistrano"
 require "capistrano/passenger"
 
