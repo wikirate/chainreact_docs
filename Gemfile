@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
-decko_gem_path = "./vendor/decko"
-
+# decko_gem_path = "./vendor/decko"
 # path decko_gem_path do
 #   gem "card", require: false
 #   gem "cardname", require: false
