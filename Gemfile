@@ -11,6 +11,9 @@ gem 'decko'
 gem 'mysql2', '< 0.5'
 gem 'dalli'
 
+gem "ed25519", "~>1.2"
+gem "bcrypt_pbkdf", "~>1.0"
+
 group :development do
   gem "capistrano"
   gem "capistrano-bundler"
