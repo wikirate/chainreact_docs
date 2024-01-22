@@ -13,7 +13,7 @@ group :development do
   gem 'capistrano-git-with-submodules', '~> 2.0'
   #gem "capistrano-maintenance", require: false
   gem "capistrano-passenger"
-  gem "capistrano-rvm"
+  # gem "capistrano-rvm"
   
   gem "decko-cap", path: "./vendor/decko-cap"
 end
